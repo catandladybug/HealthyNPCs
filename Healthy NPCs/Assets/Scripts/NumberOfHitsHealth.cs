@@ -48,4 +48,12 @@ public class NumberOfHitsHealth : MonoBehaviour, IHealth
         yield return new WaitForSeconds(invulnerabilityTimeAfterEachHit);
         canTakeDamage = true;
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(hitsRemaining - 1);
+        }
+    }
 }
